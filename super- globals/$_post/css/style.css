@@ -1,0 +1,10 @@
+form  ul{
+	padding: 0;
+	margin: 0;
+}
+
+
+form  li {
+	list-style: none;
+	margin-bottom: 1em;
+}

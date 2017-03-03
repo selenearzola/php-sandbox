@@ -1,0 +1,11 @@
+# Deny everyone by myself
+	<Limit GET POST PUT>
+	order deny,allow
+	deny from all
+	allow from ::1
+	</Limit>
+
+# Using http://whatismyipaddress.com/ we can provide
+# an specific ip address to allow.
+
+
