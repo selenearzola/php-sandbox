@@ -1,16 +1,17 @@
-<?php 
+<?php
 /*
 |----------------------------------------------------------------------------------------------------------------
 	ACTS LIKE A CONTROLLER
 |---------------------------------------------------------------------------------------------------------------- 
 */
-	require 'blog.php';
-	use Blog\db;
+require 'blog.php';
 
-	// Fetch all the posts
-	$posts = db\get_posts('posts', $conn);
+use Blog\db;
 
-	view('index', array(
-		'posts' =>$posts
-	));
+// Fetch all the posts
 
+$posts = db\get_posts('posts', $conn);
+
+view('index', array(
+	'posts' => $posts
+));

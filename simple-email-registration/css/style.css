@@ -1,13 +1,14 @@
-ul, li {
-	margin: 0;
-	padding: 0;
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
-li{
-	list-style: none;
+li {
+  list-style: none;
 }
 
-.notice{
-	color:red;
-	font-style: italic;
+.notice {
+  color: red;
+  font-style: italic;
 }

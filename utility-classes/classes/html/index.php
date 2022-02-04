@@ -1,32 +1,26 @@
 <?php
-	require "html.php";
+require "html.php";
 ?>
 
 
-	<!doctype html>
-	<html lang="en">
-		<head>
-			<meta charset="utf-8">
-				<title>Html class utilities</title>
-				<meta name="description" content="">
-				<meta name="author" content="">
-				<!--[if lt IE 9]>
-					<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-				<![endif]-->
-		</head>
-		<body>
+<!doctype html>
+<html lang="en">
 
-			<?= HTML::link("about/index.php","About us")?>			
-			<?= HTML::items(array('Selene','Juanito','Ana','Judas'))?>
-			<br>
-			<?= HTML::image('http://dasser.mx/img/Dasser01.jpg', 'Selene')?>
-			<br>
-			<?= HTML::script(array('http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'))?>
+<head>
+	<meta charset="utf-8">
+	<title>HTML utilities class</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-			
-	
-		</body>
-	</html>
-	
+</head>
 
+<body>
+	<?= HTML::link("about/index.php", "About us") ?>
+	<?= HTML::items(['Candida Clementina', 'Radomír Seraphina', 'Eustaquio Skadi', 'Svetovid Roland'])) ?>
+	<br>	
+	<?= HTML::image('https://randomuser.me/api/portraits/women/16.jpg', 'Candida Clementina') ?>	
+	<br>	
+	<?= HTML::script(array('http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')) ?>
+</body>
 
+</html>

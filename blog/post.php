@@ -1,21 +1,15 @@
 <?php
 
-	require 'blog.php';
-	use Blog\db;
+require 'blog.php';
 
-	$post = db\get_by_id($conn,(int)$_GET['id']);
+use Blog\db;
 
-	if( $post){
-		$post = $post[0];
-		view('post', array(
-		'post' =>$post
-	));
-	}else{
-		header('location:index.php');
-	}
+$post = db\get_by_id($conn, (int) $_GET['id']);
 
-	
+if ($post) {
 
-
-	
-
+	$post = $post[0];
+	view('post', ['post' => $post]);
+} else {
+	header('location:index.php');
+}

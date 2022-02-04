@@ -1,32 +1,31 @@
 <?php
-	require 'config.php';
 
-	$letter ="S";
+require 'config.php';
 
-	try{
-		/* what database are we using? */
-		$conn = new PDO("mysql:host=localhost;dbname=practice", $config['DB_USERNAME'], $config['DB_PASSWORD']);
-		/* PDO::ATTRERRORMODE to display any error in the process*/
-		$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$letter = "S";
 
-		/*Fetch information from a database*/
+try {
 
-		$stmt = $conn->prepare('SELECT * FROM users WHERE  username LIKE :letter');
-		$stmt->setFetchMode(PDO::FETCH_OBJ);
-		$stmt->execute(array(
-			'letter' =>$letter . '%'
-		));
+	// what database are we using?
+	$conn = new PDO("mysql:host=localhost;dbname=practice", $config['DB_USERNAME'], $config['DB_PASSWORD']);
 
-		/* Using bindParam for an specifiy value params: placeholder, $variableWhoContainsTheValueToSearch,type.*/
+	// PDO::ATTRERRORMODE to display any error in the process
 
-		// $stmt->bindParam(':letter', $letter, PDO::PARAM_STR);
-		// $stmt->execute();
-		while ($row = $stmt->fetch()){
-			print_r($row);
-		}
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	// Fetch information from a database
+	$stmt = $conn->prepare('SELECT * FROM users WHERE  username LIKE :letter');
+	$stmt->setFetchMode(PDO::FETCH_OBJ);
+	$stmt->execute(['letter' => $letter . '%']);
 
-		
-	}catch(PDOException $e){
-		echo 'ERROR'. $e->getMessage();
+	// Using bindParam for an specifiy value params: placeholder, $variableWhoContainsTheValueToSearch, type
+	// $stmt->bindParam(':letter', $letter, PDO::PARAM_STR);
+	// $stmt->execute();
+
+	while ($row = $stmt->fetch()) {
+
+		print_r($row);
 	}
+} catch (PDOException $e) {
+	echo 'ERROR' . $e->getMessage();
+}

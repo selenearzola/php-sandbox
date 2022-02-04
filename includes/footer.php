@@ -2,7 +2,6 @@
 		<p>Copyright Information</p>
 	</footer>
 
+	</body>
 
-	<script src="js/scripts.js"></script>
-</body>
-</html>
+	</html>

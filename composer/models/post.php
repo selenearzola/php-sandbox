@@ -1,6 +1,5 @@
 <?php
 
-
-class Post extends ActiveRecord\Model{
-	
+class Post extends ActiveRecord\Model
+{
 }

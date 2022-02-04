@@ -1,7 +1,9 @@
-<?php namespace Portafolio;
-	
-	$config = array(
-		'dbname'     =>  'blog',
-		'username'   =>  'root',
-		'password'    =>  'selenearzola',
-		);
+<?php
+
+namespace Portafolio;
+
+$config = [
+	'password' =>  'selenearzola',
+	'username' =>  'root',
+	'dbname' =>  'blog'
+];
